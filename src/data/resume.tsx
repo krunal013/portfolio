@@ -8,14 +8,14 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 export const DATA = {
   name: "Krunal Mistry",
   initials: "KM",
-  url: "https://krunal.io",
+  url: "https://krunalmistry.in",
   location: "Ahmedabad, India",
   locationLink: "https://www.google.com/maps/place/ahmedabad",
   description:
     "Full Stack Developer. I build scalable products, ship fast, and solve real-world problems.",
   summary:
     "Hii I’m a full stack developer with a strong focus on MERN stack and modern web technologies, currently building products and client solutions under my own startup. Over the past few years, I’ve worked on SaaS platforms, dashboards, billing systems, and real-world business applications. I enjoy turning complex requirements into clean, scalable systems and continuously improving performance, security, and user experience through hands-on development.",
-  avatarUrl: "/me.jpeg",
+  avatarUrl: "/mee.jpeg",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
@@ -30,7 +30,7 @@ export const DATA = {
   ],
   contact: {
     email: "krunalmistry2510@gmail.com",
-    tel: "+91XXXXXXXXXX",
+    tel: "+916353157921",
     social: {
       GitHub: {
         name: "GitHub",
