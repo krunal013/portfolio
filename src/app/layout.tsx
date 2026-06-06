@@ -22,19 +22,66 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
+
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
   },
+
   description: DATA.description,
+
+  keywords: [
+    "Krunal Mistry",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "MERN Stack Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+    "Portfolio",
+    "Ahmedabad Developer",
+    "Web Developer India",
+    "SaaS Developer",
+  ],
+
+  authors: [
+    {
+      name: DATA.name,
+      url: DATA.url,
+    },
+  ],
+
+  creator: DATA.name,
+  publisher: DATA.name,
+
+  alternates: {
+    canonical: DATA.url,
+  },
+
   openGraph: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png", // create later if needed
+        width: 1200,
+        height: 630,
+        alt: DATA.name,
+      },
+    ],
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: DATA.name,
+    description: DATA.description,
+    images: ["/og-image.png"],
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -46,12 +93,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
+
   verification: {
-    google: "",
+    google: "", // Search Console ID
     yandex: "",
   },
 };
@@ -89,6 +133,22 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: DATA.name,
+      url: DATA.url,
+      jobTitle: "Full Stack Developer",
+      sameAs: [
+        "https://github.com/krunal013",
+        "https://www.linkedin.com/in/krunal-mistry-21359a229",
+      ],
+    }),
+  }}
+/>
       </body>
     </html>
   );

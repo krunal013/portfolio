@@ -1,0 +1,18 @@
+import { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: "https://krunalmistry.in",
+      lastModified: new Date(),
+      priority: 1,
+      changeFrequency: "weekly",
+    },
+    {
+      url: "https://krunalmistry.in/blog",
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: "weekly",
+    },
+  ];
+}
